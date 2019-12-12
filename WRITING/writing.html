@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Linux and Git Commands</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="manifest" href="site.webmanifest">
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <meta name="theme-color" content="#fafafa">
+<style>
+  fa {
+    padding: 20px ;
+    font-size: 30px ;
+    width: 50px ;
+    text-align: center ;
+    text-decoration: none ;
+    margin: 5px 2px ;
+  }
+
+</style>
+
+
+</head>
+<body>
+<!--[if IE]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
+  your browser</a> to improve your experience and security.</p>
+<![endif]-->
+
+<div id="wrapper">
+  <div id="header">
+
+    <div id="navbar">
+      <a href="../index.html">Home</a>
+      <a href="../ABOUT/about.html">About</a>
+      <a href="../PROJECTS/projects.html">Project</a>
+      <a href="../WRITING/writing.html">Writing</a>
+      <a href="../RESUME/resume.html">Resume</a>
+      <a href="../CONTACT/contact.html">Contact</a>
+    </div>
+  </div>
+  <div id="masthead">
+
+  </div>
+  <div id="content"class="floatLeft grBig">
+    <div id="article_heading">
+      <h1>Linux and Git Tutorial</h1>
+    </div>
+    <div id="article_text">
+      <h2>Linux Commands</h2>
+      <h3>Insert Mode</h3>
+      <p>The shortcut is: "i" The Insert mode lets you insert text in a document. (insert text where the cursor is) or "o" (insert text at the beginning of the following line).</p>
+      <h3>Visual Mode</h3>
+      <p>The shortcut is: "V" The visual mode permits the user to select the text as you would do with a mouse but using the keyboard instead of the mouse. Useful to copy several lines f text for example.</p>
+      <h3>Command Mode</h3>
+      <p>Command begins with the symbol ":" When you are in another mod you can use the escape key (sometimes you'll need to hit it twice) to come back to command mod at any time.</p>
+      <h3>Vim Usage Example</h3>
+      <p>Example editing of the file /etc/hosts/</p>
+      <p class="pre">vim /etc/hosts</p>
+      <p>The editor is now in command mode. To start editing the file content, enter:</p>
+      <p class ="pre">:1[enter]</p>
+      <p>Now you can edit the file by navigating to the line that you want to change with the cursor keys and then start typing the text. When you are finished with editing, press the [esc] key to go back to the command mode.</p>
+      <p>To save the file and exit the editor, enter:</p>
+      <p class="pre">:x[return]</p>
+      <p>In case you want to quit vim without saving the file, enter:</p>
+      <p class="pre">:q![return]</p>
+      <h3>Vim Command Reference</h3>
+      <p><strong>Save</strong> ::w</p>
+      <p><strong>Save and exit</strong> :wq</p>
+      <p><strong>exit</strong> :q</p>
+      <p><strong>force</strong> (example:! :w! :q!)</p>
+      <p><strong>Vertical Split:</strong> open a document and then type :vsplit /path-to-document/document and this will open the specified document and split the screen so you can see both documents.</p>
+      <p><strong>copy</strong> :y</p>
+      <p><strong>copy a line</strong> :yy</p>
+      <p><strong>paste</strong> :p</p>
+      <p><strong>cut</strong> :d</p>
+      <p><strong>cut a line</strong> :dd</p>
+      <h3>Home Directory</h3>
+      <p>Home Directory is the default directory that a user places into when the logs in. The username is typically where the files are listed under</p>
+      <h3>Tildo</h3>
+      <p>Character: ~</p>
+      <p>The Tildo is a character used that refers to the current user's home directory. </p>
+      <h3>CD</h3>
+      <p>The "CD" command stands for "change directory." As the name suggests it used to change the directory. If the commands has no argument then it take you to the home directory.</p>
+      <h3>mkdir</h3>
+      <p>"mkdir" command in Linux allows the user to create directories (also referred to as folders in some operating systems ). This command can create multiple directories at once as well as set the permissions for the directories.</p>
+      <p class="pre">$ mkdir [options...] [directories...]
+      <br>$ mkdir NewDirectory</p>
+      <h3>Copying Files (cp)</h3>
+      <p>cp refers to copy. You can make a copy of a file or directory using cp command. -r use it for folders to copy internal recursive files, otherwise folder copy will not work.</p>
+      <p class="pre">$ cp welcome.txt welcome_copy.txt</p>
+      <h3>Print Working Directory (PWD)</h3>
+      <p>It refers to print working directory. It prints the absolute path of directory where you are in right now.</p>
+      <p class="pre">$ pwd
+      <br>/home/root</p>
+      <h3>mv</h3>
+      <p>The "mv" command is used to move files. You can use absolute or relative paths when moving files. You can also change the name of the destination file.</p>
+      <p>This command is used to move a file.</p>
+      <p class="pre">$ mv /home/vagrant/file01 /tmp/file01</p>
+      <p>This command is used to move and change the name of the file</p>
+      <p class="pre">$ cp /home/vagrant/file01 /tmp/newfile</p>
+      <h3>rm</h3>
+      <p>The "rm" command is used to delete files and directories.</p>
+      <p>Use this command to delete a file:</p>
+      <p class="pre">$ rm /tmp/file01</p>
+      <p>Use this command to recursively remove all files in a directory: </p>
+      <p class="pre">$ rm -r /tmp/dir01</p>
+      <p>Use this command to skip the confirmation prompt for removing a file:</p>
+      <p class="pre">$ rm -f /tmp/file01</p>
+      <h3>History</h3>
+      <p>"history" is a command that shows the last 500 commands you have entered.</p>
+      <p class="pre">$ history</p>
+      <p>You can use "-c" to clear the history buffer</p>
+      <p class="pre">$ history -c</p>
+      <p>You can use "!!" to rerun the previous command</p>
+      <p class="pre">$ !!</p>
+      <p>You can also use "!N" where "N" is the number of the command from the history command output.</p>
+      <p class="pre">$ !5</p>
+      <h2>Git Commands</h2>
+      <h3>Important Commands to know</h3>
+      <ul>
+        <li>$ git init -- initialize</li>
+        <li>$ git add -- add to repository</li>
+        <li>$ git status -- see unstaged and staged files</li>
+        <li>$ git reset -- remove files from staging area</li>
+        <li>$ git commit -m "commit message here" -- commit to branch</li>
+        <li>$ git add -A -- add everything to staging area</li>
+        <li>$ git log -- see commit just made</li>
+        <li>$ cd -- change directory</li>
+        <li>$ cd .. -- previous directory</li>
+        <li>$ ls -- what's in directory</li>
+        <li>$ ls -la -- all info about directory</li>
+        <li>$ touch .gitignore -- ignore files (for files with sensitive info) </li>
+      </ul>
+      <h3>Repository (Create/Track)</h3>
+      <p>Repository: Location of where file are in</Lp>
+      <p>Commit: Command on git that selects branch</p>
+      <ol type="1">
+        <li>Create a repository on GitHub</li>
+        <li>Configure your credentials:</li>
+          <ul>
+            <li>$ git config --global user.email "email@address.com"</li>
+            <li>$ git config --global user.name "Your Name"</li>
+          </ul>
+        <li>Go to the folder with desired projects: $cd ./file_path/</li>
+        <li>Initialize git repository: $ git init</li>
+        <li>Link GitHub repository successfully linked: $ git remote add origin</li>
+        <li>Check if repository successfully linked: $ git remote -v</li>
+        <li>Add all files to staging area. Replace dot with filename to add specific files: $ git add</li>
+        <li>Check staging area: $ git status To unstage a file: $ git rm --cached file_name</li>
+        <li>Commit any changes to master branch: $ git commit -m "COMMIT MESSAGE"</li>
+        <li>Push changes to master branch: $ git push origin master</li>
+      </ol>
+      <h3>Cloning</h3>
+      <p>Clone: Command on git that clone your branch on a local computer</p>
+      <p class="pre">* $ git clone <repository URL> <WHERE U WANT TO CLONE>
+      <br>* e.g. $ git clone ../remote_repo.git .
+      <br>* $ git clone https://github.com/stval98/A03</p>
+      <ul type = "1">
+        <li>List all repository information: $git remote -v</li>
+        <li>List all branches in repository (local and remote): $ git branch -a</li>
+      </ul>
+      <h3>Push to (local/Remote)</h3>
+      <p><strong>Push:</strong> Command used on git that trasfer commit commands from a local computer to a remote repo</p>
+      <p><strong>Pull:</strong> Command used on git that downloads fiel from a remote repo and installs and update on a local computer</p>
+      <p><strong>Remote:</strong> Command used on Git that creates a copy of a file on local computer</p>
+      <ul type = "1">
+        <li>Show changes made to files: $ git diff</li>
+        <li>Check staging area: $ git status</li>
+        <li>Add files to staging area: $ git add -A</li>
+        <li>Check changes made to staging area: $ git status</li>
+        <li>Commit changes to master branch: $ git commit -m "changes made" </li>
+        <li>Pull changes from master branch: $ git pull origin master </li>
+        <li>Push changes to master branch: $ git push origin master </li>
+      </ul>
+      <h3>Merging Branches to Master and Deleting</h3>
+      <p><strong>Branch:</strong> Command on git that creates a branch</p>
+      <p><strong>Merge:</strong> Command on git that merges two branche into separate branch</p>
+      <h3>Creating a Local Branch</h3>
+      <ul type="1">
+        <li>Create Branch: $ git branch BRANCH_NAME</li>
+        <li>Switch to branch: $ git checkout BRANCH_NAME</li>
+        <li>List Local Branches: $ git branch</li>
+      </ul>
+      <h3>Merging Branches</h3>
+      <ul type = "1">
+        <li>Switch to your production branch</li>
+        <li>Create a branch to add the hotfix</li>
+        <li>After it's tested, merge the hotfix branch, and push to production</li>
+        <li>Switch back to your original user story and continue working.</li>
+      </ul>
+      <h3>Delete a Local Branch:</h3>
+      <ul type = "1">
+        <li>List branches merged in so far: $ git branch --merged</li>
+        <li>Delete branch locally: $ git branch -d BRANCH_NAME</li>
+        <li>List all branches: $ git branch -a</li>
+        <li>Delete remote branch: $ git push origin --delete BRANCH_NAME</li>
+      </ul>
+      <p class="pre">$ git branch iss53
+        <br>$ git checkout iss53
+        <br>$ git checkout -b iss53</p>
+      <h3>Solve a Merge Conflict</h3>
+      <p><strong>Merge Conflict:</strong> Command on git used when merge command has competing commits and needs users help to deciide final merge</p>
+      <p><strong>Fetch: </strong>Command on git that update files from remote repository to local computer</p>
+      <ul type = "1">
+        <li>Pull changes from master branch: $ git pull origin master</li>
+        <li>Check staging area to see file affected: $ git status</li>
+        <li>Inspect file to find conflict. Search for <<<<<<< HEAD conflict marker. </li>
+        <li>Make necessary changes to resolve the conflict. </li>
+        <li>Commit changes: $ git commit -m "changes made" </li>
+        <li>Push changes to branch: $ git push </li>
+      </ul>
+  </div>
+</div>
+  <div id="sidebar" class="floatLeft grSmall">
+    <div id="sidebar_image">
+      <h3>Connect with me on my Social Media Platforms:</h3>
+      <a href="#" style="padding: 20px ;font-size: 50px ;width: 100px ;text-align: center ;text-decoration: none ;margin: 5px 2px;" class="fa fa-facebook"></a>
+      <a href="#" style="padding: 20px ;font-size: 50px ;width: 100px ;text-align: center ;text-decoration: none ;margin: 5px 2px;" class="fa fa-github"></a>
+      <a href="#" style="padding: 20px ;font-size: 50px ;width: 100px ;text-align: center ;text-decoration: none ;margin: 5px 2px;" class="fa fa-instagram"></a>
+      <a href="#" style="padding: 20px ;font-size: 50px ;width: 100px ;text-align: center ;text-decoration: none ;margin: 5px 2px;" class="fa fa-linkedin"></a>
+    </div>
+  </div>
+  <div id="footer" class="clear centerText">
+
+    © First Last -
+    <script type="text/javascript">
+      var d = new Date()
+      document.write(d.getFullYear())
+    </script>
+  </div>
+</div>
+<script src="/js/vendor/modernizr-3.7.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+<script src="/js/plugins.js"></script>
+<script src="/js/main.js"></script>
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
+  window.ga = function () {
+    ga.q.push(arguments)
+  };
+  ga.q = [];
+  ga.l = +new Date;
+  ga('create', 'UA-154268587-1', 'auto');
+  ga('set', 'transport', 'beacon');
+  ga('send', 'pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+</html>
